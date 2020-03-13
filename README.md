@@ -1,3 +1,12 @@
+#原版基础增加错误处理以适应群辉的编码环境
+
+
+
+
+
+
+
+
 # qBittorrent-collector
 
 ### Info
