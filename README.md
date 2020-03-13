@@ -1,8 +1,11 @@
-#原版基础增加错误处理以适应群辉的编码环境
-
-
-
-
+### 工具适用于qbittorrent批量导出种子文件。
+在原版基础增加错误处理以适应群辉的编码环境。
+使用Python2编写，需要配置相关环境。
+# 使用说明
+1. 安装python2环境。
+2. 找到BT_backup目录。可以使用`find / -name BT_backup` 全盘查找
+3. 脚本使用方法: `python collector.py <source_dir> [<dest_dir>]` 
+4. 说明：**source_dir**:BT_backup目录绝对路径，**dest_dir**:导出torrent文件目录，留空默认为当前目录。
 
 
 
@@ -26,3 +29,4 @@ The original intent was to access the `BT_backup` folder in `AppData` directly, 
 Find your qBittorrent installation's BT_backup folder, located by default on Windows at `C:\Users\<user>\AppData\Local\qBittorrent\BT_backup)`. You likely will not have permission to use this folder directly, so copy/paste the files to a source directory of your choice.
 
 Running `python collector.py <source_dir>` will result in the output files' placement defaulting to `./output` in the directory from which `collector.py` resides. Optionally specify a destination directory as the next parameter.
+1
