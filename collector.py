@@ -50,7 +50,13 @@ for file in source_files:
 
 dest_files = glob.iglob(os.path.join(dest_dir, "*.torrent"))
 for file in dest_files:
-	new_filename = os.path.join(dest_dir, namefinder.namefinder(file))
-	os.rename(file, new_filename)
+    try:	
+        new_filename = os.path.join(dest_dir, namefinder.namefinder(file))
+        os.rename(file, new_filename)
+        print '%s is ok! remove ok!' %new_filename
+    except Exception as e:
+        print e
+        print '%s error!!!!!!!!!!!!!!!!!!!!!' % new_filename
+        continue
 
 ## End Renaming Torrent Files ## 
